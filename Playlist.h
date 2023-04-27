@@ -13,6 +13,7 @@ private:
     vector<Cancion> listaCanciones;
 public:
     PlayList();
+    PlayList(string nombreLista);
     PlayList(string nombreLista, string descripcion);
 
     //getters

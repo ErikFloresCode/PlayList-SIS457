@@ -3,7 +3,12 @@
 using namespace std;
 
 PlayList::PlayList() {
-    nombreLista = "lista De Por defecto";
+    nombreLista = "lista Por defecto";
+    descripcion = "";
+}
+
+PlayList::PlayList(string nombreLista) {
+    this->nombreLista = nombreLista;
     descripcion = "";
 }
 

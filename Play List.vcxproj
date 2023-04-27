@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Artista.cpp" />
     <ClCompile Include="Cancion.cpp" />
+    <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Playlist.cpp" />
     <ClCompile Include="Tiempo.cpp" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Artista.h" />
     <ClInclude Include="Cancion.h" />
+    <ClInclude Include="Funciones.h" />
     <ClInclude Include="Playlist.h" />
     <ClInclude Include="Tiempo.h" />
   </ItemGroup>

@@ -17,6 +17,8 @@ public:
     Cancion(string titulo);
     Cancion(string titulo, Tiempo duracion);
     Cancion(string titulo, Tiempo duracion, Artista artista);
+    //constructor sin constructores
+    Cancion(string titulo, int minutos, int segundos, string nombreArtista, string procedencia, Genero genero);
     //getters
     string getTitulo() { return titulo; }
     Tiempo getTiempo() { return duracion; }
