@@ -1,6 +1,9 @@
 #include <iostream>
+#include <Windows.h>
 #include "Funciones.h"
 using namespace std;
+
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 PlayList* seleccionar_lista(vector<PlayList*> Mislistas) {
     int opc;
@@ -55,4 +58,10 @@ void mostrarRocola(vector<Cancion>* p) {
         cout << i + 1;
         p->begin()[i].verInfo();
     }
+}
+
+void error(string mensaje) {
+    SetConsoleTextAttribute(hConsole, 4);
+    cout << "\n" << mensaje << endl;
+    SetConsoleTextAttribute(hConsole, 15);
 }
