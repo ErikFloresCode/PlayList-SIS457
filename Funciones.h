@@ -7,5 +7,6 @@ using namespace std;
 PlayList* seleccionar_lista(vector<PlayList*> Mislistas);
 void llenarRocola(vector<Cancion>* p);
 void mostrarRocola(vector<Cancion>* p);
-
 void error(string mensaje);
+//funciones para texto de colores 
+void color(string cadena, int n);

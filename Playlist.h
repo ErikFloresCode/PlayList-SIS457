@@ -1,16 +1,20 @@
 #pragma once
 
 #include <iostream>
-#include <vector>
+#include <list>
 #include "Cancion.h"
 using namespace std;
+
+//bool comparar_por_duracion(Cancion& cancion1, Cancion& cancion2);
+//bool comparar_por_calificacion(Cancion& cancion1, Cancion& cancion2);
+
 
 class PlayList
 {
 private:
     string nombreLista;
     string descripcion;
-    vector<Cancion> listaCanciones;
+    list<Cancion> listaCanciones;
 public:
     PlayList();
     PlayList(string nombreLista);
@@ -19,7 +23,10 @@ public:
     //getters
     string getNombrelista() { return nombreLista; }
     string getDescripcion() { return descripcion; }
-    vector<Cancion> getListaCanciones() { return listaCanciones; }
+    list<Cancion> getListaCanciones() { return listaCanciones; }
+
+    //setters
+    void setListaCanciones(list<Cancion> newlist);
 
     //otras funciones
     void importar(PlayList lista);
@@ -28,4 +35,9 @@ public:
     void verLista();
     void eliminar_Cancion(int nroCancion);
     Cancion buscarCancion(string titulo);
+    void ordenar_por_calificacion();
+    void ordenar_por_tiempo();
+    void mostrarTop();
+    void mostrarTop(int n);
+
 };

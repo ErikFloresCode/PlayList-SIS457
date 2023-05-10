@@ -2,6 +2,14 @@
 #include "Playlist.h"
 using namespace std;
 
+bool comparar_por_duracion(Cancion& cancion1, Cancion& cancion2) {
+    return cancion1.extraer_tiempo_seg() < cancion2.extraer_tiempo_seg();
+}
+
+bool comparar_por_calificacion(Cancion& cancion1, Cancion& cancion2) {
+    return cancion1.getCalificacion() < cancion2.getCalificacion();
+}
+
 PlayList::PlayList() {
     nombreLista = "lista Por defecto";
     descripcion = "";
@@ -18,8 +26,8 @@ PlayList::PlayList(string nombreLista, string descripcion) {
 }
 
 void PlayList::importar(PlayList lista) {
-    for (int i = 0; i < lista.getListaCanciones().size(); i++) {
-        agregarCancion(lista.getListaCanciones()[i]);
+    for (auto it = listaCanciones.begin(); it != listaCanciones.end(); ++it) {
+        agregarCancion(*it);
     }
 }
 
@@ -33,8 +41,8 @@ void PlayList::clonarlista(PlayList lista) {
 void PlayList::agregarCancion(Cancion c) {
     //Validado sin canciones repetidas
     bool existe = false;
-    for (int i = 0; i < listaCanciones.size(); i++) {
-        if (c.getTitulo() == listaCanciones[i].getTitulo())
+    for (auto it = listaCanciones.begin(); it != listaCanciones.end(); ++it) {
+        if (c.getTitulo() == it->getTitulo())
             existe = true;
     }
     if (!existe)
@@ -42,24 +50,56 @@ void PlayList::agregarCancion(Cancion c) {
 }
 
 void PlayList::verLista() {
+    int i = 0;
     cout << nombreLista << endl;
-    cout << "Nro      /     titulo      / duracion (mm:ss)" << endl;
-    for (int i = 0; i < listaCanciones.size(); i++) {
-        cout << i + 1 << "        " << listaCanciones[i].getTitulo() << "         " << listaCanciones[i].getTiempo().minutos << ":" << listaCanciones[i].getTiempo().segundos << endl;
+    cout << "Nro    calificacion      /      titulo          / duracion (mm:ss)" << endl;
+    for (auto it = listaCanciones.begin(); it != listaCanciones.end(); ++it) {
+        i++;
+        cout << i << "   " << it->getCalificacion() << "        " << it->getTitulo() << "         " << it->getTiempo().minutos << ":" << it->getTiempo().segundos << endl;
     }
 }
 
 void PlayList::eliminar_Cancion(int nroCancion){
-    listaCanciones.erase(listaCanciones.begin() + nroCancion - 1);
+    int i = 1;
+    for (auto it = listaCanciones.begin(); it != listaCanciones.end(); ++it) {
+        if (nroCancion == i) {
+            listaCanciones.remove(*it);
+            break;
+        }
+        i++;
+    }
 }
 
 Cancion PlayList::buscarCancion(string titulo) {
-    Cancion c;
-    for (int i = 0; i < listaCanciones.size(); i++) {
-        if (listaCanciones[i].getTitulo() == c.getTitulo()) {
+    Cancion c(titulo), c2("Cancion no encontrada");
+    for (auto it = listaCanciones.begin(); it != listaCanciones.end(); ++it) {
+        if (it->getTitulo() == c.getTitulo()) {
             cout << "cancion encontrada" << endl;
-            c = listaCanciones[i];
+            return *it;
         }
     }
-    return c;
+    return c2;
+}
+
+void PlayList::mostrarTop() {
+    mostrarTop(listaCanciones.size());
+}
+
+void PlayList::mostrarTop(int n) {
+    list<Cancion>::iterator it = listaCanciones.begin();
+    cout << "Nro        Titulo" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << it->getCalificacion() << "        " << it->getTitulo() << endl;
+        it++;
+    }
+}
+
+void PlayList::ordenar_por_calificacion() {
+    listaCanciones.sort(comparar_por_calificacion);
+    listaCanciones.reverse();
+}
+
+void PlayList::ordenar_por_tiempo() {
+    listaCanciones.sort(comparar_por_duracion);
+    //listaCanciones.reverse();
 }

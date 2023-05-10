@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-enum Genero { Rock, Baladas, Cumbia, Romatica, Pop, indefinido };
+enum Genero { Rock, Baladas, Cumbia, Romatica, Pop, Romantica, Salsa, indefinido };
 class Artista
 {
 private:

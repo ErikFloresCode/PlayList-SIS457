@@ -22,13 +22,18 @@ int main() {
 	do {
 		system("cls");
 		cout << "		SELECCIONE UNA ACCION" << endl;
+		if (currentlist != nullptr) {
+			cout << "Para la lista: "; color(currentlist->getNombrelista(), 10);
+		}
 		cout << "1.-Seleccione una lista " << endl;
 		cout << "2.-Mostrar una lista" << endl;
 		cout << "3.-Agregar cancion" << endl;
 		cout << "4.-Eliminar cancion" << endl;
 		cout << "5.-Importar lista" << endl;
 		cout << "6.-Clonar lista" << endl;
-		cout << "7.-salir" << endl;
+		cout << "7.-Ordenar lista" << endl;
+		cout << "8.-Mostrar top" << endl;
+		cout << "0.-salir" << endl;
 		cout << "(opc):";
 		cin >> opc;
 		if (opc == 1)
@@ -37,7 +42,7 @@ int main() {
 			switch (opc)
 			{
 			case 2:
-
+				
 				if (currentlist->getListaCanciones().size() != 0)
 					currentlist->verLista();
 				else
@@ -87,19 +92,36 @@ int main() {
 
 				break;
 			case 7:
+				cout << "		1.-Ordenar segun tiempo" << endl;
+				cout << "		2.-orcenar segun calificacion" << endl;
+				cin >> opc2;
+				if (opc2 == 1)
+					currentlist->ordenar_por_tiempo();
+				if (opc2 == 2)
+					currentlist->ordenar_por_calificacion();
+				break;
+			case 8:
+				currentlist->ordenar_por_calificacion();
+				cout << "Indique el top: ";
+				cin >> opc2;
+				currentlist->mostrarTop(opc2);
+				break;
+			case 0:
 				exit(0);
 			}
 		}
 		else
 			error(error2);
 
-		if (opc < 1 || opc > 7)
+		if (opc < 1 || opc > 9)
 			error("\n		OPCION INVALIDA\n");
-		if (opc != 7)
+		if (opc != 0)
 			cout << "\nPresione enter para volver al menu\n";
 		(void)getchar();
 		(void)getchar();
 		
-	} while (opc != 7);
+	} while (opc != 0);
 	return 0;
 }
+
+//advance(iterador, numero)
