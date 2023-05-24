@@ -36,3 +36,20 @@ void Artista::verInfoCompleta() {
     cout << "   Procedencia: " << procedencia << endl;
     cout << "   Genero: " << genero << endl;
 }
+// Rock, Baladas, Cumbia, Romatica, Pop, Romantica, Salsa, indefinido
+Genero string_to_genero(string genero) {
+    if ("Rock" == genero)
+        return Rock;
+    if ("Baladas" == genero)
+        return Rock;
+    if ("Cumbias" == genero)
+        return Rock;
+    if ("Romantica" == genero)
+        return Rock;
+    if ("Pop" == genero)
+        return Rock;
+    if ("Salsa" == genero)
+        return Rock;
+    else
+        return indefinido
+}

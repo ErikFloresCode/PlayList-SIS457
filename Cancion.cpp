@@ -38,6 +38,13 @@ Cancion::Cancion(string titulo, Tiempo duracion, Artista artista, int calificaci
     this->calificacion = calificacion;
 }
 
+Cancion::Cancion(string titulo, int minutos, int segundos, int codigo, int calificacion) {
+    this->titulo = titulo;
+    this->duracion = duracion;
+    this->codigo = codigo;
+    this->calificacion = calificacion;
+}
+
 void Cancion::verInfo() {
     cout << "        " << titulo << "       " << duracion.minutos << ":" << duracion.segundos << endl;
 }

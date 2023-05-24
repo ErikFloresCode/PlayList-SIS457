@@ -8,5 +8,5 @@ PlayList* seleccionar_lista(vector<PlayList*> Mislistas);
 void llenarRocola(vector<Cancion>* p);
 void mostrarRocola(vector<Cancion>* p);
 void error(string mensaje);
-//funciones para texto de colores 
+//funciones para texto de colores en consola
 void color(string cadena, int n);

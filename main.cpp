@@ -125,3 +125,9 @@ int main() {
 }
 
 //advance(iterador, numero)
+//clase Artista_data_manajer
+//include <fstream>
+//<< operador para mostrar en consola
+//>> recibir de la consola
+//tratamiento de cadenas como hacer substring en c++
+//debuguear
