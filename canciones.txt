@@ -7,7 +7,7 @@ Reno 911!: Miami,6:58 AM,772,5
 Mr. Average,8:22 PM,23,1
 Jurassic Park,7:56 PM,665,4
 Times Square,8:10 PM,478,2
-"Violin, El",9:55 AM,62,2
+Violin,9:55 AM,62,2
 Bitter Creek,3:33 PM,67,1
 Breaking Wind,8:50 AM,402,5
 Act Da Fool,6:40 AM,290,5
@@ -18,12 +18,12 @@ Dangerous Davies: The Last Detective,9:42 AM,953,5
 Cape Fear,2:35 AM,356,1
 Someday This Pain Will Be Useful to You,12:04 AM,516,2
 Tabloid,1:48 AM,955,3
-"Millions Game, The (Das Millionenspiel)",1:29 PM,884,2
+"Millions Game The (Das Millionenspiel)",1:29 PM,884,2
 Battle in Heaven (Batalla en el cielo),7:33 PM,273,5
-"Girl by the Lake, The (La ragazza del lago)",7:05 PM,68,5
-"Hi-Line, The",8:05 PM,270,1
+"Girl by the Lake The (La ragazza del lago)",7:05 PM,68,5
+"Hi-Line The",8:05 PM,270,1
 Goats,4:37 AM,326,2
-"Great Gatsby, The",2:07 AM,458,4
+"Great Gatsby The",2:07 AM,458,4
 Amsterdamned,5:07 PM,463,3
 American Gangster,6:32 PM,966,2
 To Mars by A-Bomb: The Secret History of Project Orion,5:33 PM,132,2

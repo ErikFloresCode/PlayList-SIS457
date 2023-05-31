@@ -6,24 +6,35 @@ Artista::Artista(){
         nombre = "Desconocido";
         procedencia = "";
         genero = indefinido;
+        nro_artista = 0;
 }
 
 Artista::Artista(string nombre) {
     this->nombre = nombre;
     procedencia = "";
     genero = indefinido;
+    nro_artista = 0;
 }
 
 Artista::Artista(string nombre, string procedencia) {
     this->nombre = nombre;
     this->procedencia = procedencia;
     genero = indefinido;
+    nro_artista = 0;
 }
 
 Artista::Artista(string nombre, string procedencia, Genero genero) {
     this->nombre = nombre;
     this->procedencia = procedencia;
     this->genero = genero;
+    nro_artista = 0;
+}
+
+Artista::Artista(string nombre, string porcedencia, Genero genero, int nro_artista) {
+    this->nombre = nombre;
+    this->procedencia = procedencia;
+    this->genero = genero;
+    this->nro_artista = nro_artista;
 }
 
 void Artista::verInfo(){
@@ -51,5 +62,5 @@ Genero string_to_genero(string genero) {
     if ("Salsa" == genero)
         return Rock;
     else
-        return indefinido
+        return indefinido;
 }

@@ -55,7 +55,7 @@ void ArtistaFileDataManager::save(Artista artista) {
     std::stringstream ss;
 
     //ss es la variable que podria asumir el papel de una consola, es decir cin, donde le vamos pasando los datos que queremos que se vayan acumulando con el operador <<
-    ss << artista.getNombre() << ", " << artista.getProcedencia() << ", " << artista.getGenero();
+    ss << "\n" << artista.getNombre() << ", " << artista.getProcedencia() << ", " << artista.getGenero();
 
     //convertimos el buffer a una cadena nuevamente
     std::string s = ss.str();

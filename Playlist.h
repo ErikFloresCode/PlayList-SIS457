@@ -5,10 +5,6 @@
 #include "Cancion.h"
 using namespace std;
 
-//bool comparar_por_duracion(Cancion& cancion1, Cancion& cancion2);
-//bool comparar_por_calificacion(Cancion& cancion1, Cancion& cancion2);
-
-
 class PlayList
 {
 private:

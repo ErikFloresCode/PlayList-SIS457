@@ -6,6 +6,8 @@ using namespace std;
 
 Cancion::Cancion(){
     titulo = "Cancion Por Defecto";
+    duracion = Tiempo();
+    artista = Artista();
 }
 
 Cancion::Cancion(string titulo) {
@@ -38,11 +40,12 @@ Cancion::Cancion(string titulo, Tiempo duracion, Artista artista, int calificaci
     this->calificacion = calificacion;
 }
 
-Cancion::Cancion(string titulo, int minutos, int segundos, int codigo, int calificacion) {
+Cancion::Cancion(string titulo, int minutos, int segundos, int codigo, int nro_artista, int vistas) {
     this->titulo = titulo;
     this->duracion = duracion;
-    this->codigo = codigo;
-    this->calificacion = calificacion;
+    this->nro_cancion = codigo;
+    this->nro_artista = nro_artista;
+    this->vistas = vistas;
 }
 
 void Cancion::verInfo() {

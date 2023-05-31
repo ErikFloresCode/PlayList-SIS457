@@ -4,15 +4,37 @@
 
 #include "Playlist.h"
 #include "Funciones.h"
+#include "ArtistaFileDataManager.h"
+#include "CancionFileDataManager.h"
+#include "PlaylistFileDataManager.h"
 
 using namespace std;
 
 int main() {
+	//rocola::loadData();
+	//rocola::start();
+
 	int opc,opc2,cant;
 	string error1 = "Lista de Reproduccion Vacia";
 	string error2 = "DEBE SELECCIONAR UNA LISTA DE REPRODUCCION PRIMERO";
 	vector<Cancion> rocola;
+	list<Cancion> rocola2;
 	llenarRocola(&rocola);
+
+	/*ArtistaDataManager* a = new ArtistaFileDataManager();
+	a->load();
+	Artista artista;
+	a->save(artista);
+
+	CancionDataManager* c = new CancionFileDataManager();
+	c->load();
+	Cancion cancion("cancion",5,35,1001,6,0);
+	c->save(cancion);*/
+
+	PlaylistDataManager* p = new PlaylistFileDataManager();
+	p->load();
+	PlayList playlist("playlist de Prueba");
+	p->save(playlist);
 
 	PlayList lista1("lista 1"), listaFavoritos("Favoritos"), listaLatinos("Latinos");
 	vector<PlayList*> Mislistas = { &lista1, &listaFavoritos, &listaLatinos };
@@ -20,7 +42,7 @@ int main() {
 	PlayList* currentlist = nullptr, * currentlist2 = nullptr;
 
 	do {
-		system("cls");
+		//system("cls");
 		cout << "		SELECCIONE UNA ACCION" << endl;
 		if (currentlist != nullptr) {
 			cout << "Para la lista: "; color(currentlist->getNombrelista(), 10);
@@ -131,3 +153,8 @@ int main() {
 //>> recibir de la consola
 //tratamiento de cadenas como hacer substring en c++
 //debuguear
+
+//singleton un solo objeto que administra
+//implementar datamanager y aplicar singleton 
+//estatico quiere decir que no se requiere una instancia de la clase
+//

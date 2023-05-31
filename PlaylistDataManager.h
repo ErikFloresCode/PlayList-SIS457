@@ -7,6 +7,7 @@
 using namespace std;
 class PlaylistDataManager
 {
+public:
 	virtual list<PlayList> load() = 0;
 	virtual void save(PlayList playlist) = 0;
 };

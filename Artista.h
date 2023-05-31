@@ -10,13 +10,15 @@ private:
     string nombre;
     string procedencia;
     Genero genero;
-
+    int nro_artista;
 public:
 
     Artista();
     Artista(string nombre);
     Artista(string nombre, string procedencia);
     Artista(string nombre, string procedencia, Genero genero);
+    //constructor para data manager
+    Artista(string nombre, string porcedencia, Genero genero, int nro_artista);
     //getters
     string getNombre() { return nombre; }
     string getProcedencia() { return procedencia; }

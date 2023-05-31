@@ -11,8 +11,10 @@ private:
     string titulo;
     Tiempo duracion;
     Artista artista;
-    int codigo;
     int calificacion;
+    int nro_cancion;
+    int vistas;
+    int nro_artista;
 public:
     Cancion();
     Cancion(string titulo);
@@ -21,13 +23,15 @@ public:
     Cancion(string titulo, Tiempo duracion, Artista artista, int calificacion);
     //constructor sin constructores
     Cancion(string titulo, int minutos, int segundos, string nombreArtista, string procedencia, Genero genero, int calificacion);
-    Cancion(string titulo, int minutos, int segundos, int codigo, int calificacion);
+    //constructor especial para importaar desde archivos
+    Cancion(string titulo, int minutos, int segundos, int codigo, int nro_artista, int vistas);
     //getters
     string getTitulo() { return titulo; }
     Tiempo getTiempo() { return duracion; }
     int getCalificacion() { return calificacion; }
-    int getCodigo() { return codigo; }
-    int getCalificacion() { return calificacion; }
+    int getNro_cancion() { return nro_cancion; }
+    int getNro_artista() { return nro_artista; }
+    int getVistas() { return vistas; }
     //otras funciones
     void verInfo();
     void verInfoCompleta();

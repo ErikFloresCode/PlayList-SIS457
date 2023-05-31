@@ -6,7 +6,8 @@
 
 using namespace std;
 //clase abstracta
-class ArtistaDataManager {
+class ArtistaDataManager 
+{
 public:
 	virtual list<Artista> load() = 0;
 	virtual void save(Artista artista) = 0;

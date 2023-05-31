@@ -7,6 +7,7 @@
 using namespace std;
 class CancionDataManager
 {
+public:
 	virtual list<Cancion> load() = 0;
 	virtual void save(Cancion cancion) = 0;
 };
