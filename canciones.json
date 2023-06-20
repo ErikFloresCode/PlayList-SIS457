@@ -1,0 +1,62 @@
+[
+  {
+    "titulo": "Bohemian Rhapsody",
+    "minutos": 5,
+    "segundos": 55,
+    "artista": "Queen"
+  },
+  {
+    "titulo": "Imagine",
+    "minutos": 3,
+    "segundos": 1,
+    "artista": "John Lennon"
+  },
+  {
+    "titulo": "Hotel California",
+    "minutos": 6,
+    "segundos": 30,
+    "artista": "Eagles"
+  },
+  {
+    "titulo": "Like a Rolling Stone",
+    "minutos": 6,
+    "segundos": 13,
+    "artista": "Bob Dylan"
+  },
+  {
+    "titulo": "Hey Jude",
+    "minutos": 7,
+    "segundos": 11,
+    "artista": "The Beatles"
+  },
+  {
+    "titulo": "Smells Like Teen Spirit",
+    "minutos": 5,
+    "segundos": 1,
+    "artista": "Nirvana"
+  },
+  {
+    "titulo": "Stairway to Heaven",
+    "minutos": 8,
+    "segundos": 2,
+    "artista": "Led Zeppelin"
+  },
+  {
+    "titulo": "Shape of You",
+    "minutos": 3,
+    "segundos": 53,
+    "artista": "Ed Sheeran"
+  },
+  {
+    "titulo": "Thriller",
+    "minutos": 5,
+    "segundos": 57,
+    "artista": "Michael Jackson"
+  },
+  {
+    "titulo": "Sweet Child o' Mine",
+    "minutos": 5,
+    "segundos": 56,
+    "artista": "Guns N' Roses"
+  }
+]

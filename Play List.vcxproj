@@ -134,13 +134,16 @@
     <ClCompile Include="Cancion.cpp" />
     <ClCompile Include="CancionDataManager.cpp" />
     <ClCompile Include="CancionFileDataManager.cpp" />
+    <ClCompile Include="CancionJsonDataManager.cpp" />
     <ClCompile Include="CancionStaticDataManager.cpp" />
+    <ClCompile Include="DataManager.cpp" />
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Playlist.cpp" />
     <ClCompile Include="PlaylistDataManager.cpp" />
     <ClCompile Include="PlaylistFileDataManager.cpp" />
     <ClCompile Include="PlaylistStaticDataManager.cpp" />
+    <ClCompile Include="Rocola.cpp" />
     <ClCompile Include="Tiempo.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,12 +154,15 @@
     <ClInclude Include="Cancion.h" />
     <ClInclude Include="CancionDataManager.h" />
     <ClInclude Include="CancionFileDataManager.h" />
+    <ClInclude Include="CancionJsonDataManager.h" />
     <ClInclude Include="CancionStaticDataManager.h" />
+    <ClInclude Include="DataManager.h" />
     <ClInclude Include="Funciones.h" />
     <ClInclude Include="Playlist.h" />
     <ClInclude Include="PlaylistDataManager.h" />
     <ClInclude Include="PlaylistFileDataManager.h" />
     <ClInclude Include="PlaylistStaticDataManager.h" />
+    <ClInclude Include="Rocola.h" />
     <ClInclude Include="Tiempo.h" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +170,7 @@
     <Text Include="canciones.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="canciones.json" />
     <None Include="playlists.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -60,6 +60,15 @@
     <ClCompile Include="PlaylistStaticDataManager.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="CancionJsonDataManager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Rocola.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Playlist.h">
@@ -104,6 +113,15 @@
     <ClInclude Include="PlaylistStaticDataManager.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="CancionJsonDataManager.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Rocola.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="artistas.txt">
@@ -115,6 +133,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="playlists.csv">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="canciones.json">
       <Filter>Archivos de recursos</Filter>
     </None>
   </ItemGroup>
