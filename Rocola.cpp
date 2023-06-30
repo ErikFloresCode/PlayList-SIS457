@@ -8,9 +8,11 @@
 void Rocola::start() {
 	
 	ArtistaDataManager* a = new ArtistaFileDataManager();
-	CancionDataManager* c = new CancionFileDataManager();
-
-	DataManager* Manager = DataManager::getInstance(a,c);
+	a->load();
+	CancionDataManager* c = new CancionJsonDataManager();
+	c->load();
+	//Manager = DataManager::getInstance(a,c);
+	DataManager::getInstance(a, c);
 }
 
 void Rocola::manipulator() {

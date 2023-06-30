@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
 	Rocola::start();
+	//Rocola::loadData();
 	Rocola::manipulator();
 	
 	return 0;

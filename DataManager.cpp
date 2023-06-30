@@ -1,5 +1,7 @@
 #include "DataManager.h"
 
+DataManager* DataManager::instance = nullptr;
+
 DataManager::DataManager(ArtistaDataManager* amd,
     CancionDataManager* cmd)
 {

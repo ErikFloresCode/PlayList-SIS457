@@ -1,6 +1,7 @@
 #pragma once
 #include "ArtistaDataManager.h"
 #include "CancionDataManager.h"
+#include "CancionJsonDataManager.h"
 #include "PlaylistDataManager.h"
 class DataManager
 {
@@ -28,6 +29,6 @@ public:
 
 };
 
-DataManager* DataManager::instance = nullptr;
+//DataManager* DataManager::instance = nullptr;
 //un metodo estatico es clase::metodo();
 

@@ -37,15 +37,19 @@ list<Cancion> CancionJsonDataManager::load() {
             {
             case 1:
                 titulo = line.substr(inicio, final);
+                cout << "titulo: " << titulo << endl;
                 break;
             case 2:
                 minuto = line.substr(inicio, final);
+                cout << "minutos: " << titulo << endl;
                 break;
             case 3:
                 segundo = line.substr(inicio, final);
+                cout << "segundos: " << titulo << endl;
                 break;
             case 4:
                 artista = line.substr(inicio, final);
+                cout << "artista: " << titulo << endl;
                 break;
             default:
                 bandera = 0;
